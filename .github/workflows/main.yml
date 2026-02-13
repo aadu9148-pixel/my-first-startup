@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मेरा फ्री स्टार्टअप</title>
+    <style>
+        body { background: #f0f2f5; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; color: #333; }
+        .dashboard { max-width: 400px; margin: auto; background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .header { border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+        .stat-card { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 10px; }
+        .label { font-size: 12px; color: #666; text-transform: uppercase; }
+        .value { font-size: 24px; font-weight: bold; color: #2ecc71; }
+        .btn { width: 100%; background: #3498db; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="header">
+        <h2>SimpleClaw Clone</h2>
+        <p style="font-size: 12px; color: #888;">Live Dashboard</p>
+    </div>
+
+    <div class="stat-card">
+        <div class="label">All-time revenue</div>
+        <div class="value" id="revenue">$0</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="label">Status</div>
+        <div class="value" style="color: #3498db; font-size: 18px;">Active</div>
+    </div>
+
+    <button class="btn" onclick="addSale()">Add New Sale (+$10)</button>
+</div>
+
+<script>
+    let amount = 0;
+    function addSale() {
+        amount += 10;
+        document.getElementById('revenue').innerText = '$' + amount;
+        alert('बधाई हो! आपकी $10 की कमाई हुई।');
+    }
+</script>
+
+</body>
+</html>
